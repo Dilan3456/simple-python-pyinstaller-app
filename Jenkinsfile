@@ -10,7 +10,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'py.test --junit-xml /var/lib/jenkins/workspace/simple-python-pyinstaller-app/test-reports/results.xml sources/test_calc.py'
-                sh 'ls -l **/test-reports/'
+                sh 'ls -l /var/lib/jenkins/workspace/simple-python-pyinstaller-app/test-reports/'
             }
             post {
             
