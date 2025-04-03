@@ -13,6 +13,15 @@ pipeline {
             }
        
         }
+         post {
+              steps {
+                sh 'ls -l **/test-reports/'
+                }
+                always {
+                    junit '**/test-reports/results.xml' 
+                }
+            }
+        
     }
        
 }
