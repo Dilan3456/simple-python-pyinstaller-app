@@ -10,6 +10,8 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'py.test --junit-xml /test-reports/results.xml sources/test_calc.py'
+                sh 'sudo chmod 777 /test-reports'
+
             }
             post {
                 always {
