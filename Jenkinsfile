@@ -13,7 +13,7 @@ pipeline {
             }
             post {
                 always {
-                    junit './var/lib/jenkins/workspace/simple-python-pyinstaller-app/test-reports'
+                    junit './var/lib/jenkins/workspace/simple-python-pyinstaller-app/test-reports/results.xml'
                 }
             }
         }
