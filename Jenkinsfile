@@ -9,9 +9,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'py.test --junit-xml /test-reports/results.xml sources/test_calc.py'
-                sh 'sudo chmod 777 /test-reports'
-
+                sh 'py.test --junit-xml /var/lib/jenkins/workspace/simple-python-pyinstaller-app/test-reports/results.xml sources/test_calc.py'
             }
             post {
                 always {
